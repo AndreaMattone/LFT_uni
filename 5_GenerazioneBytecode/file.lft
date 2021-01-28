@@ -1,0 +1,62 @@
+( do
+	(read x)
+	(read l)
+
+	(do
+		(= z (+ 1 1 1 1 ))
+		(= k (* 1 2 3 4))
+		(print z k)
+	)
+
+	( while (<> l 0) (do (= l (- l 1)) (print l) ))
+
+	(
+		cond (<> x 0) ( while (<> x 0) (do (= x (- x 1)) (print x (+ 444 444) 888) )
+					  )
+
+					  (
+					  	else (do (= y (/ 1776 2)) (print x y 888))
+					  )
+	)
+
+	(do
+		(= z (+ 1 1 1 1 ))
+		(= k (* 1 2 3 4))
+		(print z k)
+	)
+
+	
+)
+
+
+/*
+read(x)
+read(l)
+
+z = 1+1+1+1+1;
+k= 1*2*3*4;
+print(z)
+print(k)
+
+while(l>0){l--; print(l)}
+
+if(x!=0){
+	while(x!=0){
+		x--;
+		print(x);
+		print(444+444);
+		print(888);
+	}
+}else{
+	y=1776/2;
+	print(x);
+	print(y);
+	print(888);
+}
+
+z = 1+1+1+1+1;
+k= 1*2*3*4;
+print(z)
+print(k)
+
+*/

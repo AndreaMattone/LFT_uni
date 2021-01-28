@@ -1,0 +1,91 @@
+###########<statp>############# (stat->(statp))
+
+= ID NUM
+	ldc num //<expr>
+	istore addr //<statp>
+= ID ID
+	iload addr1 // <expr>
+	istore addr2 // <statp>
+= ID (<exprp>)
+	num/addr //<expr>
+	num/addr //<expr>
+	isub/iadd //<exprp>
+	...
+	istore addr //<statp>
+
+
+cond <bexpr> <stat> <elseopt>
+	num/addr // <expr>
+	num/addr // <expr>
+	ificmpR L1 // <bexprp>
+	goto L2 // <bexprp>
+     L1: // <bexprp>
+	 <stat>
+     L2: // <statp>
+	<elseopt>
+
+
+while <bexpr> <stat>
+     L1: //<statp>
+	num/addr //<bexpr>-><bexprp>-><expr>
+	num/addr //<bexpr>-><bexprp>-><expr>
+	ificmpR L2 //<bexpr>-><bexprp>
+	goto L3 //<bexpr>-><bexprp>
+     L2: //<bexpr>-><bexprp>
+	 <stat> // <statp>
+	 goto L1 // <statp>
+     L3: //<statp>
+
+
+do <statlist>
+	//<stat>
+
+
+print <exprlist>
+	num/addr //<expr>
+	*print* //invokestatic
+
+
+read ID
+	*read* //invokestatic
+	istore addr //<statp>
+
+
+
+###########<bexprp>#############
+//da usare insieme a <statp>
+
+###########<expr>###############
+	ldc num //case 1
+	iload addr //case 2
+	(<exprp>)//<exprp> case 3
+
+
+###########<expr>###############
+	num/addr
+	num/addr
+	isum/idiv
+
+	<exprlist>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
