@@ -1,0 +1,4 @@
+(do
+	(read x)
+	(read y)
+)

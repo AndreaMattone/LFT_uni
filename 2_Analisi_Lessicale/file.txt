@@ -1,0 +1,2 @@
+/*@#?*/ 7 /*calcolare la velocita‘*/
+(= d 7a a7) /*distanza*//*da Torino a Lione*/
